@@ -97,10 +97,9 @@ Since the HP models are highly simplified and lattice-based, their spatial scale
 ## Project Structure
 
 ```
-FoldCompare/
+protein-folding-algorithms/
 ├── af_model_structures/      (AlphaFold PDB files generated)
 ├── af_model_plots/           (AlphaFold structure visualizations)
-├── comparison_plots/         (Optional comparison plots between models)
 ├── hp_model_structures/      (HP model PDB files generated)
 ├── hp_model_plots/           (HP model folding visualizations)
 ├── hp_model.py               (Greedy algorithm for HP model folding)
