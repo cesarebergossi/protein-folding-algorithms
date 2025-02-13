@@ -64,25 +64,32 @@ This repository is a Python framework for exploring and comparing protein foldin
 This repository contains several scripts. Here’s a brief overview:
 
 - **HP Model (Greedy Algorithm):**
-Run the script to generate an HP model using the greedy algorithm and produce a PDB file and 3D visualization:
+Generate an HP model using the greedy algorithm and produce a PDB file and 3D visualization.
  
-  ```bash
-  python hp_model.py
-  ```
+	```bash
+  	python hp_model.py
+  	```
+
+- **HP Model (Genetic Algorithm):**
+Generate an HP model using a genetic algorithm.
+
+	```bash
+  	python hp_model_genetic.py
+  	```
 
 - **AlphaFold Integration:**
-Download and visualize AlphaFold predicted structures:
+Download and visualize AlphaFold predicted structures.
 
-  ```bash
-  python alphafold.py
-  ```
+	```bash
+	python alphafold.py
+	```
 
 - **Structural Comparison:**
-Compare the HP model with AlphaFold structures (computing RMSD and secondary structure similarity):
+Compare the HP model with AlphaFold structures (computing RMSD and secondary structure similarity).
 
-  ```bash
-  python compare_models.py
-  ```
+	```bash
+	python compare_models.py
+ 	```
 
 *Note on Scale*:
 Since the HP models are highly simplified and lattice-based, their spatial scales do not match the detailed AlphaFold predictions. When comparing plots, it is best to present them side by side and discuss differences in topology and contact patterns rather than absolute distances.
