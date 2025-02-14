@@ -50,7 +50,7 @@ This repository is a Python framework for exploring and comparing protein foldin
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/protein-folding-algorithms.git
+   git clone https://github.com/cesarebergossi/protein-folding-algorithms.git
    cd protein-folding-algorithms
    ```
 
