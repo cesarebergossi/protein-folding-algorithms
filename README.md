@@ -50,8 +50,8 @@ This repository is a Python framework for exploring and comparing protein foldin
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/yourusername/FoldCompare.git
-   cd FoldCompare
+   git clone https://github.com/yourusername/protein-folding-algorithms.git
+   cd protein-folding-algorithms
    ```
 
 2. **Install dependencies:**
