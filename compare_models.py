@@ -14,6 +14,7 @@ warnings.filterwarnings("ignore", category=UserWarning)
 # Define directories
 hp_model_dir = "hp_model_structures"
 af_model_dir = "af_model_structures"
+exp_data_dir = "known_structures"
 
 # Proteins
 proteins = {
@@ -188,14 +189,26 @@ def main():
         hp_pdb = os.path.join(hp_model_dir, f"{protein_name}_HP.pdb")
         # hp_pdb = os.path.join(HP_MODEL_DIR, f"{protein_name}_HP_GA.pdb")
         af_pdb = os.path.join(af_model_dir, f"{protein_name}_AF.pdb")
+        exp_pdb = os.path.join(exp_data_dir, f"{protein_name}.pdb")
         if os.path.exists(hp_pdb) and os.path.exists(af_pdb):
             print(f"\nComparing structures for {protein_name} ({uniprot_id})")
+            print("Comparing HP model with AF model:")
             compute_rmsd(hp_pdb, af_pdb)
             compare_secondary_structure(hp_pdb, af_pdb)
             compare_ca_distances(hp_pdb, af_pdb)
             compare_ca_angles(hp_pdb, af_pdb)
             compare_radius_of_gyration(hp_pdb, af_pdb)
             compare_contact_maps(hp_pdb, af_pdb, threshold=8.0)
+
+            print("\nComparing HP model with Experimental data:")
+            compare_secondary_structure(hp_pdb, exp_pdb)
+            compare_radius_of_gyration(hp_pdb, exp_pdb)
+            compare_contact_maps(hp_pdb, exp_pdb, threshold=8.0)
+
+            print("\nComparing AF model with Experimental data:")
+            compare_secondary_structure(af_pdb, exp_pdb)
+            compare_radius_of_gyration(af_pdb, exp_pdb)
+            compare_contact_maps(af_pdb, exp_pdb, threshold=8.0)
         else:
             print(f"Missing PDB files for {protein_name}, skipping comparison.")
 
