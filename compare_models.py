@@ -187,7 +187,7 @@ def main():
     for protein_name, uniprot_id in proteins.items():
         # Select the HP model file (uncomment for GA version)
         hp_pdb = os.path.join(hp_model_dir, f"{protein_name}_HP.pdb")
-        # hp_pdb = os.path.join(HP_MODEL_DIR, f"{protein_name}_HP_GA.pdb")
+        # hp_pdb = os.path.join(hp_model_dir, f"{protein_name}_HP_GA.pdb")
         af_pdb = os.path.join(af_model_dir, f"{protein_name}_AF.pdb")
         exp_pdb = os.path.join(exp_data_dir, f"{protein_name}.pdb")
         if os.path.exists(hp_pdb) and os.path.exists(af_pdb):
